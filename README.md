@@ -14,7 +14,7 @@ Chef version 0.10.10+ and Ohai 0.6.12+ are required.
 **Notes**: This cookbook has been tested on the listed platforms. It may work on other platforms with or without modification.
 
 ### Cookbooks
-* yum-epel (note: this requires yum cookbook v3.0, which breaks compatibility with many other cookbooks)
+* yum-epel
 
 ## Recipes
 

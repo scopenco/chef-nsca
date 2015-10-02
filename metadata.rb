@@ -1,6 +1,6 @@
 name             'nsca'
 maintainer       'Andrei Skopenko'
-maintainer_email 'andrey@scopenco.net'
+maintainer_email 'andrey@skopenko.net'
 license          'Apache 2.0'
 description      'Installs/Configures NSCA daemon/client'
 long_description IO.read(File.join(File.dirname(__FILE__), 'README.md'))

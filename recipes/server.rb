@@ -26,10 +26,10 @@ end
 
 package 'nsca'
 
-if !Chef::DataBag.list.key?(node['nsca']['data_bag'])
-  password = node['nsca']['password']
-else
+if Chef::DataBag.list.key?(node['nsca']['data_bag'])
   password = data_bag_item(node['nsca']['data_bag'], node['nsca']['data_bag_item'])['password']
+else
+  password = node['nsca']['password']
 end
 
 template ::File.join(node['nsca']['conf_dir'], 'nsca.cfg') do
@@ -40,7 +40,7 @@ template ::File.join(node['nsca']['conf_dir'], 'nsca.cfg') do
   variables(
     :password => password
   )
-  notifies :restart, "service[nsca]"
+  notifies :restart, 'service[nsca]'
 end
 
 service 'nsca' do

@@ -26,11 +26,20 @@ end
 
 package 'nsca'
 
+if !Chef::DataBag.list.key?(node['nsca']['data_bag'])
+  password = node['nsca']['password']
+else
+  password = data_bag_item(node['nsca']['data_bag'], node['nsca']['data_bag_item'])['password']
+end
+
 template ::File.join(node['nsca']['conf_dir'], 'nsca.cfg') do
   source 'nsca.cfg.erb'
   owner node['nsca']['user']
   group node['nsca']['group']
   mode node['nsca']['mode']
+  variables(
+    :password => password
+  )
   notifies :restart, "service[nsca]"
 end
 

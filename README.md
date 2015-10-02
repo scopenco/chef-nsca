@@ -42,8 +42,15 @@ Configure NSCA client.
 * `node['nsca']['aggregate_writes']` - This option determines whether or not the nsca daemon will aggregate writes to the external command file for client connections that contain multiple check results.
 * `node['nsca']['append_to_file']` - This option determines whether or not the nsca daemon will open the external command file for writing or appending.
 * `node['nsca']['max_packet_age']` - This option is used by the nsca daemon to determine when client data is too old to be valid.
-* `node['nsca']['password']` - This is the password that should be used to descrypt the incoming packets.
+* `node['nsca']['password']` - This option is used for password if data bag doesn't exist.
 * `node['nsca']['decryption_method']` - This option determines the method by which the nsca daemon will decrypt the packets it receives from the clients.
+
+## Data bags
+
+Password for NSCA can be described in data bag `node['nsca']['data_bag_item']`. There should be an item which name is the value of `node['nsca']['data_bag_item']`.
+In our case it is set to data bag "apps" and item to "nsca".
+
+Refer to examples from the "nsca" cookbook: https://github.com/parallels-cookbooks/nsca/tree/master/data_bags/apps
 
 
 ## Contributing

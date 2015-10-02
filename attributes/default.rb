@@ -16,6 +16,12 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
+# password data bag
+# set data bag item or attribute for password
+default['nsca']['data_bag'] = 'apps'
+default['nsca']['data_bag_item'] = 'nsca'
+default['nsca']['password'] = nil
+
 # config file options
 default['nsca']['pid_file'] = '/var/run/nsca.pid'
 default['nsca']['server_address'] = nil
@@ -25,7 +31,6 @@ default['nsca']['debug'] = 0
 default['nsca']['aggregate_writes'] = 0
 default['nsca']['append_to_file'] = 0
 default['nsca']['max_packet_age'] = 30
-default['nsca']['password'] = 'testpassword'
 default['nsca']['decryption_method'] = 1
 
 # platform specific options

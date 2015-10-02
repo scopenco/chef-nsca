@@ -26,8 +26,17 @@ end
 
 package 'nsca-client'
 
+if !Chef::DataBag.list.key?(node['nsca']['data_bag'])
+  password = node['nsca']['password']
+else
+  password = data_bag_item(node['nsca']['data_bag'], node['nsca']['data_bag_item'])['password']
+end
+
 template ::File.join(node['nsca']['conf_dir'], 'send_nsca.cfg') do
   owner node['nsca']['user']
   group node['nsca']['group']
   mode node['nsca']['mode']
+  variables(
+    :password => password
+  )
 end

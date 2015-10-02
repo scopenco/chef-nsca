@@ -12,5 +12,5 @@ alternate_dump_file=<%= node['nsca']['alternate_dump_file'] %>
 aggregate_writes=<%= node['nsca']['aggregate_writes'] %>
 append_to_file=<%= node['nsca']['append_to_file'] %>
 max_packet_age=<%= node['nsca']['max_packet_age'] %>
-password=<%= node['nsca']['password'] %>
+password=<%= @password %>
 decryption_method=<%= node['nsca']['decryption_method'] %>

@@ -50,7 +50,7 @@ Configure NSCA client.
 Password for NSCA can be described in data bag `node['nsca']['data_bag_item']`. There should be an item which name is the value of `node['nsca']['data_bag_item']`.
 In our case it is set to data bag "apps" and item to "nsca".
 
-Refer to examples from the "nsca" cookbook: https://github.com/parallels-cookbooks/nsca/tree/master/data_bags/apps
+Refer to examples from the "nsca" cookbook: https://github.com/parallels-cookbooks/nsca/tree/master/test/fixtures/data_bags/apps
 
 
 ## Contributing

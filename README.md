@@ -1,6 +1,12 @@
 # NSCA
 Chef cookbook to install and configure NSCA server/client.
 
+## Repository
+https://github.com/parallels-cookbooks/nsca
+
+## Chef Super Market
+https://supermarket.chef.io/cookbooks/nsca
+
 ## Requirements
 ### Chef
 Chef version 0.10.10+ and Ohai 0.6.12+ are required.

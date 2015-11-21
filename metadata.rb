@@ -4,7 +4,7 @@ maintainer_email 'andrey@skopenko.net'
 license          'Apache 2.0'
 description      'Installs/Configures NSCA daemon/client'
 long_description IO.read(File.join(File.dirname(__FILE__), 'README.md'))
-version          '0.1.1'
+version          '0.1.2'
 
 supports 'amazon'
 supports 'redhat'

@@ -20,7 +20,7 @@
 # set data bag item or attribute for password
 default['nsca']['data_bag'] = 'apps'
 default['nsca']['data_bag_item'] = 'nsca'
-default['nsca']['password'] = nil
+default['nsca']['password'] = 'password'
 
 # config file options
 default['nsca']['pid_file'] = '/var/run/nsca.pid'

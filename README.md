@@ -1,4 +1,8 @@
 # NSCA
+[![Cookbook Version](https://img.shields.io/cookbook/v/nsca.svg)](https://supermarket.chef.io/cookbooks/nsca)
+[![Build Status](https://secure.travis-ci.org/parallels-cookbooks/nsca.png?branch=master)](http://travis-ci.org/parallels-cookbooks/nsca)
+
+## Description
 Chef cookbook to install and configure NSCA server/client.
 
 ## Repository

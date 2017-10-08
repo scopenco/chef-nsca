@@ -26,11 +26,11 @@ end
 
 package 'nsca'
 
-if Chef::DataBag.list.key?(node['nsca']['data_bag'])
-  password = data_bag_item(node['nsca']['data_bag'], node['nsca']['data_bag_item'])['password']
-else
-  password = node['nsca']['password']
-end
+password = if Chef::DataBag.list.key?(node['nsca']['data_bag'])
+             data_bag_item(node['nsca']['data_bag'], node['nsca']['data_bag_item'])['password']
+           else
+             node['nsca']['password']
+           end
 
 template ::File.join(node['nsca']['conf_dir'], 'nsca.cfg') do
   source 'nsca.cfg.erb'
@@ -38,12 +38,12 @@ template ::File.join(node['nsca']['conf_dir'], 'nsca.cfg') do
   group node['nsca']['group']
   mode node['nsca']['mode']
   variables(
-    :password => password
+    password: password
   )
   notifies :restart, 'service[nsca]'
 end
 
 service 'nsca' do
-  supports :status => true, :reload => true, :restart => true
+  supports status: true, reload: true, restart: true
   action [:enable, :start]
 end

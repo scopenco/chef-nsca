@@ -1,21 +1,20 @@
-# NSCA
+# NSCA Installer Cookbook
+
 [![Cookbook Version](https://img.shields.io/cookbook/v/nsca.svg)](https://supermarket.chef.io/cookbooks/nsca)
-[![Build Status](https://secure.travis-ci.org/parallels-cookbooks/nsca.png?branch=master)](http://travis-ci.org/parallels-cookbooks/nsca)
+[![Build Status](https://secure.travis-ci.org/scopenco/chef-nsca.png?branch=master)](http://travis-ci.org/scopenco/chef-nsca)
 
 ## Description
+
 Chef cookbook to install and configure NSCA server/client.
 
-## Repository
-https://github.com/parallels-cookbooks/nsca
-
-## Chef Super Market
-https://supermarket.chef.io/cookbooks/nsca
-
 ## Requirements
+
 ### Chef
-Chef version 0.10.10+ and Ohai 0.6.12+ are required.
+
+* Chef 12 or higher
 
 ### Platforms
+
 * Debian 6.X, 7.X
 * Ubuntu 14.04
 * Red Hat Enterprise Linux (CentOS/Amazon/Scientific/Oracle) 5.X, 6.X
@@ -24,18 +23,23 @@ Chef version 0.10.10+ and Ohai 0.6.12+ are required.
 **Notes**: This cookbook has been tested on the listed platforms. It may work on other platforms with or without modification.
 
 ### Cookbooks
+
 * yum-epel
 
 ## Recipes
 
 ### server
+
 Configure NSCA server.
 
 ### client
+
 Configure NSCA client.
 
 #### Attributes
+
 ### platform specific attributes (auto set based on platform)
+
 * `node['nsca']['conf_dir']` - location of the nsca configuration
 * `node['nsca']['user']` - NSCA user
 * `node['nsca']['group']` - NSCA group
@@ -60,16 +64,7 @@ Configure NSCA client.
 Password for NSCA can be described in data bag `node['nsca']['data_bag_item']`. There should be an item which name is the value of `node['nsca']['data_bag_item']`.
 In our case it is set to data bag "apps" and item to "nsca".
 
-Refer to examples from the "nsca" cookbook: https://github.com/parallels-cookbooks/nsca/tree/master/test/fixtures/data_bags/apps
-
-
-## Contributing
-1. Fork the repository on Github
-2. Create a named feature branch (like `add_component_x`)
-3. Write your change
-4. Write tests for your change (if applicable)
-5. Run the tests, ensuring they all pass
-6. Submit a Pull Request using Github
+Refer to examples from the "nsca" cookbook: https://github.com/scopenco/chef-nsca/tree/master/test/fixtures/data_bags/apps
 
 ## License & Authors
 - Author:: Andrei Skopenko <andrey@skopenko.net>

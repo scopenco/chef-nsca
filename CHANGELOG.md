@@ -1,6 +1,10 @@
 nsca CHANGELOG
 ========================
 
+0.1.4 (2018-01-10)
+------------------
+- Fix syntax by @angelus169
+
 0.1.3 (2017-10-08)
 ------------------
 - Update travis settings

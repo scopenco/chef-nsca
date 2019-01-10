@@ -6,7 +6,7 @@ description      'Installs/Configures NSCA daemon/client'
 long_description IO.read(File.join(File.dirname(__FILE__), 'README.md'))
 source_url 'https://github.com/scopenco/chef-nsca'
 issues_url 'https://github.com/scopenco/chef-nsca/issues'
-version '0.1.3'
+version '0.1.4'
 
 supports 'amazon'
 supports 'redhat'
